@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tactician Coach - Dev Shell</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body class="bg-gray-950 text-gray-100 flex flex-col h-screen overflow-hidden">
+  <!-- Dev Header -->
+  <header class="bg-gray-900 border-b border-gray-800 px-6 py-2.5 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <span class="font-black text-amber-400 text-sm tracking-wider uppercase">Tactician Coach • Dev Preview</span>
+      <span class="text-xs text-gray-500">Overwolf App Windows & Simulator</span>
+    </div>
+    <div class="flex items-center space-x-3">
+      <a href="./src/windows/desktop/desktop.html" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-3 py-1.5 rounded transition">
+        Open Desktop Window ↗
+      </a>
+      <a href="./src/windows/post_game/post_game.html" class="text-xs bg-amber-500 hover:bg-amber-400 text-black font-bold px-3 py-1.5 rounded transition">
+        Open In-Game Overlay ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Split View Iframe -->
+  <main class="flex-1 flex overflow-hidden">
+    <!-- Desktop Dashboard View (Left / Main) -->
+    <div class="flex-1 border-r border-gray-800 flex flex-col">
+      <div class="bg-gray-900/60 px-4 py-1.5 text-xs text-gray-400 font-semibold border-b border-gray-800">
+        Window: Desktop Dashboard (desktop.html)
+      </div>
+      <iframe src="./src/windows/desktop/desktop.html" class="w-full flex-1 border-none"></iframe>
+    </div>
+
+    <!-- Overlay Window View (Right / Floating Simulator) -->
+    <div class="w-[420px] bg-black/60 flex flex-col">
+      <div class="bg-gray-900/60 px-4 py-1.5 text-xs text-amber-400 font-semibold border-b border-gray-800 flex justify-between items-center">
+        <span>Window: In-Game Overlay (post_game.html)</span>
+        <span class="text-[10px] text-gray-500">400x520 HUD</span>
+      </div>
+      <div class="flex-1 p-4 flex items-center justify-center">
+        <iframe src="./src/windows/post_game/post_game.html" class="w-[380px] h-[500px] border border-gray-800 rounded-xl shadow-2xl overflow-hidden"></iframe>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

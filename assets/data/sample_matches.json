@@ -1,0 +1,138 @@
+{
+  "matches": [
+    {
+      "matchId": "NA1_DEMO_FIRST_PLACE",
+      "gameDatetime": 1730000000000,
+      "gameDurationSeconds": 2180,
+      "setNumber": 13,
+      "player": {
+        "puuid": "demo-puuid-winner",
+        "gameName": "TacticianGod",
+        "tagLine": "NA1",
+        "placement": 1,
+        "level": 9,
+        "goldLeft": 4,
+        "lastRound": "6-3",
+        "damageToPlayers": 168,
+        "augments": [
+          "TFT13_Augment_RebelCrest",
+          "TFT13_Augment_CyberneticUplink",
+          "TFT13_Augment_RadiantRefactor"
+        ],
+        "traits": [
+          { "name": "TFT13_Rebel", "numUnits": 7, "tierCurrent": 3 },
+          { "name": "TFT13_PitFighter", "numUnits": 2, "tierCurrent": 1 },
+          { "name": "TFT13_Enforcer", "numUnits": 2, "tierCurrent": 1 },
+          { "name": "TFT13_Sentinel", "numUnits": 2, "tierCurrent": 1 }
+        ],
+        "units": [
+          {
+            "characterId": "TFT13_Jinx",
+            "displayName": "Jinx",
+            "tier": 2,
+            "items": ["TFT_Item_InfinityEdge", "TFT_Item_GuinsoosRageblade", "TFT_Item_LastWhisper"],
+            "isCarry": true
+          },
+          {
+            "characterId": "TFT13_Vi",
+            "displayName": "Vi",
+            "tier": 2,
+            "items": ["TFT_Item_Bloodthirster", "TFT_Item_TitansResolve", "TFT_Item_SteraksGage"],
+            "isCarry": true
+          },
+          {
+            "characterId": "TFT13_Jayce",
+            "displayName": "Jayce",
+            "tier": 2,
+            "items": ["TFT_Item_WarmogsArmor", "TFT_Item_SunfireCape"]
+          },
+          {
+            "characterId": "TFT13_Ekko",
+            "displayName": "Ekko",
+            "tier": 2,
+            "items": []
+          },
+          {
+            "characterId": "TFT13_Irelia",
+            "displayName": "Irelia",
+            "tier": 2,
+            "items": []
+          },
+          {
+            "characterId": "TFT13_Sett",
+            "displayName": "Sett",
+            "tier": 2,
+            "items": ["TFT_Item_DragonsClaw"]
+          }
+        ]
+      },
+      "lobby": [
+        { "puuid": "p1", "gameName": "TacticianGod", "placement": 1, "level": 9, "traits": ["7 Rebel", "2 Pit Fighter"] },
+        { "puuid": "p2", "gameName": "ArcaneMaster", "placement": 2, "level": 9, "traits": ["6 Sentinel", "4 Academy"] },
+        { "puuid": "p3", "gameName": "ZaunDrift", "placement": 3, "level": 8, "traits": ["5 Chem-Baron", "4 Bruiser"] },
+        { "puuid": "p4", "gameName": "PiltoverEnforcer", "placement": 4, "level": 8, "traits": ["4 Enforcer", "3 Rebel"] },
+        { "puuid": "p5", "gameName": "RerollKing", "placement": 5, "level": 7, "traits": ["3 Pit Fighter", "2 Bruiser"] },
+        { "puuid": "p6", "gameName": "FlexLord", "placement": 6, "level": 8, "traits": ["4 Sentinel", "2 Dominator"] },
+        { "puuid": "p7", "gameName": "FastNinth", "placement": 7, "level": 7, "traits": ["3 Chem-Baron"] },
+        { "puuid": "p8", "gameName": "HardStuck8th", "placement": 8, "level": 7, "traits": ["2 Rebel", "2 Bruiser"] }
+      ]
+    },
+    {
+      "matchId": "NA1_DEMO_EIGHTH_PLACE",
+      "gameDatetime": 1730005000000,
+      "gameDurationSeconds": 1320,
+      "setNumber": 13,
+      "player": {
+        "puuid": "demo-puuid-loser",
+        "gameName": "UnluckyRoller",
+        "tagLine": "NA1",
+        "placement": 8,
+        "level": 7,
+        "goldLeft": 48,
+        "lastRound": "4-3",
+        "damageToPlayers": 28,
+        "augments": [
+          "TFT13_Augment_SilverSpoon",
+          "TFT13_Augment_MagicPenetration",
+          "TFT13_Augment_CalculatedLoss"
+        ],
+        "traits": [
+          { "name": "TFT13_Rebel", "numUnits": 2, "tierCurrent": 0 },
+          { "name": "TFT13_PitFighter", "numUnits": 2, "tierCurrent": 1 },
+          { "name": "TFT13_Bruiser", "numUnits": 2, "tierCurrent": 1 }
+        ],
+        "units": [
+          {
+            "characterId": "TFT13_Jinx",
+            "displayName": "Jinx",
+            "tier": 1,
+            "items": ["TFT_Item_BlueBuff", "TFT_Item_BrambleVest"],
+            "isCarry": true
+          },
+          {
+            "characterId": "TFT13_Sett",
+            "displayName": "Sett",
+            "tier": 1,
+            "items": []
+          },
+          {
+            "characterId": "TFT13_Irelia",
+            "displayName": "Irelia",
+            "tier": 1,
+            "items": ["TFT_Item_LastWhisper"]
+          }
+        ]
+      },
+      "lobby": [
+        { "puuid": "p1", "gameName": "ProPlayer1", "placement": 1, "level": 9, "traits": ["6 Sentinel"] },
+        { "puuid": "p2", "gameName": "ProPlayer2", "placement": 2, "level": 8, "traits": ["7 Rebel"] },
+        { "puuid": "p3", "gameName": "ProPlayer3", "placement": 3, "level": 8, "traits": ["5 Chem-Baron"] },
+        { "puuid": "p4", "gameName": "ProPlayer4", "placement": 4, "level": 8, "traits": ["4 Enforcer"] },
+        { "puuid": "p5", "gameName": "ProPlayer5", "placement": 5, "level": 8, "traits": ["4 Bruiser"] },
+        { "puuid": "p6", "gameName": "ProPlayer6", "placement": 6, "level": 7, "traits": ["3 Pit Fighter"] },
+        { "puuid": "p7", "gameName": "ProPlayer7", "placement": 7, "level": 7, "traits": ["4 Academy"] },
+        { "puuid": "p8", "gameName": "UnluckyRoller", "placement": 8, "level": 7, "traits": ["2 Rebel", "2 Bruiser"] }
+      ]
+    }
+  ]
+}

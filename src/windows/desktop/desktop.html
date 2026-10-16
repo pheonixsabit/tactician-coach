@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tactician Coach - Comprehensive Analysis</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="bg-tft-bg text-gray-100 font-sans min-h-screen flex flex-col">
+  <!-- Top Navigation Bar -->
+  <header class="bg-tft-card border-b border-tft-border px-6 py-3 flex items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center font-black text-amber-400">
+        TC
+      </div>
+      <div>
+        <h1 class="font-bold text-base tracking-wide text-white">Tactician Coach</h1>
+        <p class="text-[11px] text-gray-400">TFT Post-Game Analyzer & Companion</p>
+      </div>
+    </div>
+
+    <!-- Active Mode & Controls -->
+    <div class="flex items-center space-x-3">
+      <div id="connectionStatus" class="flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-emerald-950/60 border border-emerald-800 text-[11px] text-emerald-300">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span id="connectionText">Local Adapter Ready</span>
+      </div>
+
+      <!-- Quick Scenario Switcher -->
+      <button id="sim1stBtn" class="bg-gray-800 hover:bg-gray-700 text-gray-200 text-xs px-3 py-1.5 rounded border border-gray-700 transition">
+        Demo #1 Comp
+      </button>
+      <button id="sim8thBtn" class="bg-gray-800 hover:bg-gray-700 text-gray-200 text-xs px-3 py-1.5 rounded border border-gray-700 transition">
+        Demo #8 Comp
+      </button>
+
+      <button id="settingsBtn" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-3 py-1.5 rounded font-medium transition flex items-center space-x-1">
+        <span>⚙ Settings</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+    <!-- Hero Match Summary -->
+    <section class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <!-- Placement & Grade Card -->
+      <div class="bg-tft-card border border-tft-border p-5 rounded-xl flex items-center justify-between">
+        <div>
+          <span class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Match Result</span>
+          <div id="heroPlacement" class="text-3xl font-black text-amber-400 mt-1">#1 Place</div>
+          <div id="heroDuration" class="text-xs text-gray-500 mt-0.5">36m 20s • Stage 6-3</div>
+        </div>
+        <div id="heroGradeBadge" class="w-16 h-16 rounded-xl bg-emerald-600 flex flex-col items-center justify-center text-white shadow-lg">
+          <span class="text-xs font-semibold uppercase tracking-wider text-emerald-200">Grade</span>
+          <span id="heroGradeLetter" class="text-3xl font-black">S</span>
+        </div>
+      </div>
+
+      <!-- Comp Identification Card -->
+      <div class="bg-tft-card border border-tft-border p-5 rounded-xl">
+        <span class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Composition Alignment</span>
+        <div id="heroCompName" class="text-lg font-bold text-white mt-1 truncate">Rebel Fast-8</div>
+        <div class="flex items-center space-x-2 mt-2">
+          <div class="flex-1 bg-gray-800 rounded-full h-2 overflow-hidden">
+            <div id="heroCompBar" class="bg-amber-400 h-2 rounded-full" style="width: 92%"></div>
+          </div>
+          <span id="heroCompPercent" class="text-xs font-bold text-amber-400">92%</span>
+        </div>
+        <div id="heroCompTier" class="text-[11px] text-gray-400 mt-1.5">Meta Tier: <span class="text-amber-400 font-bold">S Tier</span> (Avg: 3.75)</div>
+      </div>
+
+      <!-- Itemization Score Card -->
+      <div class="bg-tft-card border border-tft-border p-5 rounded-xl">
+        <span class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Item & BIS Quality</span>
+        <div class="flex items-baseline space-x-2 mt-1">
+          <span id="heroItemScore" class="text-2xl font-black text-white">95</span>
+          <span class="text-xs text-gray-400">/ 100</span>
+        </div>
+        <p id="heroItemSummary" class="text-xs text-emerald-400 mt-2">✓ Equipped full BIS on primary carries</p>
+      </div>
+
+      <!-- Economy & Tempo Card -->
+      <div class="bg-tft-card border border-tft-border p-5 rounded-xl">
+        <span class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Economy & Tempo</span>
+        <div class="flex items-baseline space-x-2 mt-1">
+          <span id="heroEconScore" class="text-2xl font-black text-white">90</span>
+          <span class="text-xs text-gray-400">/ 100</span>
+        </div>
+        <p id="heroEconSummary" class="text-xs text-gray-300 mt-2">Standard tempo • 4g unspent at finish</p>
+      </div>
+    </section>
+
+    <!-- Post-Game Coaching Insights Box -->
+    <section class="bg-tft-card border border-indigo-900/60 p-5 rounded-xl shadow-lg">
+      <div class="flex items-center space-x-2 mb-3">
+        <span class="text-lg">💡</span>
+        <h2 class="font-bold text-white text-base">Tactician Coaching Breakdown</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <div class="bg-emerald-950/20 border border-emerald-900/40 p-4 rounded-lg">
+          <div class="font-bold text-emerald-400 text-xs uppercase tracking-wider mb-2">🟢 What You Did Well</div>
+          <ul id="coachStrengthsList" class="space-y-1.5 text-gray-300 text-xs">
+            <!-- Strengths -->
+          </ul>
+        </div>
+
+        <div class="bg-rose-950/20 border border-rose-900/40 p-4 rounded-lg">
+          <div class="font-bold text-rose-400 text-xs uppercase tracking-wider mb-2">🔴 Blunders & Leaks</div>
+          <ul id="coachBlundersList" class="space-y-1.5 text-gray-300 text-xs">
+            <!-- Blunders -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-4 p-3 bg-indigo-950/30 border border-indigo-800/40 rounded-lg text-xs text-indigo-200 flex items-center space-x-2">
+        <span class="font-bold text-amber-400">Actionable Advice for Next Match:</span>
+        <span id="coachNextGameAdvice">Commit to an all-in roll down on stage 4-1 if dropping below 35 HP.</span>
+      </div>
+    </section>
+
+    <!-- Final Board & Units Section -->
+    <section class="bg-tft-card border border-tft-border p-5 rounded-xl space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="font-bold text-white text-base">Final Team Board & Itemization</h2>
+        <div id="playerLevelBadge" class="text-xs bg-gray-800 text-gray-300 px-2.5 py-1 rounded font-semibold border border-gray-700">
+          Level 9
+        </div>
+      </div>
+
+      <!-- Unit Cards Grid -->
+      <div id="unitsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- Two-Column: Augment Synergy & Lobby Standings -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Augment Synergy -->
+      <div class="bg-tft-card border border-tft-border p-5 rounded-xl space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="font-bold text-white text-base">Augment Tactical Synergies</h2>
+          <span class="text-[10px] text-gray-500 uppercase tracking-wider">Riot Compliance Verified</span>
+        </div>
+        <div id="augmentsContainer" class="space-y-2.5">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- Lobby Standings -->
+      <div class="bg-tft-card border border-tft-border p-5 rounded-xl space-y-3">
+        <h2 class="font-bold text-white text-base">Lobby Final Standings</h2>
+        <div id="lobbyContainer" class="space-y-1.5 text-xs">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Settings Modal (Hidden by Default) -->
+  <div id="settingsModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50">
+    <div class="bg-tft-card border border-tft-border max-w-md w-full mx-4 rounded-xl p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-gray-800">
+        <h3 class="font-bold text-white text-lg">Settings & API Configuration</h3>
+        <button id="closeSettingsBtn" class="text-gray-400 hover:text-white">✕</button>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Riot Game Name</label>
+          <input id="settingRiotId" type="text" placeholder="e.g. TacticianGod" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-white focus:border-amber-400 outline-none">
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Tagline</label>
+          <input id="settingTagLine" type="text" placeholder="e.g. NA1" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-white focus:border-amber-400 outline-none">
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Region</label>
+          <select id="settingRegion" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-white focus:border-amber-400 outline-none">
+            <option value="americas">Americas (NA, BR, LATAM)</option>
+            <option value="europe">Europe (EUW, EUNE, TR, RU)</option>
+            <option value="asia">Asia (KR, JP)</option>
+            <option value="sea">SEA (OCE, PH, SG, TH, TW, VN)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Riot API Key (Optional)</label>
+          <input id="settingApiKey" type="password" placeholder="RGAPI-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-white focus:border-amber-400 outline-none">
+          <p class="text-[10px] text-gray-500 mt-1">Leave empty to use local fixtures & Overwolf GEP events. Provide to enable Riot API primary mode.</p>
+        </div>
+
+        <div class="pt-2 flex items-center space-x-2">
+          <input id="settingAutoOpen" type="checkbox" class="rounded bg-gray-900 border-gray-700 text-amber-500">
+          <label for="settingAutoOpen" class="text-gray-300">Auto-open overlay when TFT match ends</label>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-gray-800 flex justify-end space-x-2">
+        <button id="cancelSettingsBtn" class="px-4 py-2 rounded bg-gray-800 text-gray-300 hover:bg-gray-700 text-xs">Cancel</button>
+        <button id="saveSettingsBtn" class="px-4 py-2 rounded bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs">Save Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-tft-card/50 border-t border-tft-border/50 py-3 text-center text-[11px] text-gray-500">
+    Tactician Coach isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties.
+  </footer>
+
+  <script type="module" src="./desktop.ts"></script>
+</body>
+</html>

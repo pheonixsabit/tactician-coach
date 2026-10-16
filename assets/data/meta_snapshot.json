@@ -1,0 +1,120 @@
+{
+  "patch": "14.23",
+  "updatedAt": "2026-10-15T00:00:00.000Z",
+  "comps": [
+    {
+      "id": "rebel-fast8",
+      "name": "Rebel Fast-8 (Jinx & Vi Carry)",
+      "tier": "S",
+      "avgPlacement": 3.75,
+      "playstyle": "Fast 8 / Standard",
+      "coreUnits": ["TFT13_Vi", "TFT13_Jinx", "TFT13_Jayce", "TFT13_Ekko", "TFT13_Irelia", "TFT13_Sett"],
+      "coreTraits": {
+        "TFT13_Rebel": 5,
+        "TFT13_Enforcer": 2,
+        "TFT13_PitFighter": 2
+      },
+      "carries": [
+        {
+          "characterId": "TFT13_Jinx",
+          "role": "AD Main Carry",
+          "bis": ["TFT_Item_InfinityEdge", "TFT_Item_GuinsoosRageblade", "TFT_Item_LastWhisper"],
+          "alternatives": ["TFT_Item_GiantSlayer", "TFT_Item_Deathblade", "TFT_Item_RedBuff"]
+        },
+        {
+          "characterId": "TFT13_Vi",
+          "role": "Bruiser / Frontline Carry",
+          "bis": ["TFT_Item_Bloodthirster", "TFT_Item_TitansResolve", "TFT_Item_SteraksGage"],
+          "alternatives": ["TFT_Item_HandOfJustice", "TFT_Item_NightHarvester", "TFT_Item_WarmogsArmor"]
+        }
+      ]
+    },
+    {
+      "id": "academy-reroll",
+      "name": "Academy Sentinels (Heimerdinger Carry)",
+      "tier": "A",
+      "avgPlacement": 4.12,
+      "playstyle": "Level 7 Reroll",
+      "coreUnits": ["TFT13_Heimerdinger", "TFT13_Rumble", "TFT13_Singed", "TFT13_Tristana", "TFT13_Blitzcrank", "TFT13_Corki"],
+      "coreTraits": {
+        "TFT13_Academy": 4,
+        "TFT13_Sentinel": 4,
+        "TFT13_Artificer": 2
+      },
+      "carries": [
+        {
+          "characterId": "TFT13_Heimerdinger",
+          "role": "AP Main Carry",
+          "bis": ["TFT_Item_BlueBuff", "TFT_Item_JeweledGauntlet", "TFT_Item_RabadonsDeathcap"],
+          "alternatives": ["TFT_Item_ArchangelsStaff", "TFT_Item_SpearOfShojin", "TFT_Item_NashorsTooth"]
+        },
+        {
+          "characterId": "TFT13_Blitzcrank",
+          "role": "Main Tank",
+          "bis": ["TFT_Item_WarmogsArmor", "TFT_Item_DragonsClaw", "TFT_Item_BrambleVest"],
+          "alternatives": ["TFT_Item_GargoyleStoneplate", "TFT_Item_Redemption", "TFT_Item_SteadfastHeart"]
+        }
+      ]
+    },
+    {
+      "id": "chemtech-brawler",
+      "name": "Chem-Baron Bruisers (Silco Carry)",
+      "tier": "A",
+      "avgPlacement": 4.25,
+      "playstyle": "Fast 8 Pivot",
+      "coreUnits": ["TFT13_Silco", "TFT13_DrMundo", "TFT13_Renata", "TFT13_Singe", "TFT13_Smeech", "TFT13_Sevika"],
+      "coreTraits": {
+        "TFT13_ChemBaron": 4,
+        "TFT13_Bruiser": 4,
+        "TFT13_Dominator": 2
+      },
+      "carries": [
+        {
+          "characterId": "TFT13_Silco",
+          "role": "AP DoT Carry",
+          "bis": ["TFT_Item_SpearOfShojin", "TFT_Item_Morellonomicon", "TFT_Item_JeweledGauntlet"],
+          "alternatives": ["TFT_Item_ArchangelsStaff", "TFT_Item_StatikkShiv", "TFT_Item_HextechGunblade"]
+        },
+        {
+          "characterId": "TFT13_DrMundo",
+          "role": "Main Tank",
+          "bis": ["TFT_Item_WarmogsArmor", "TFT_Item_DragonsClaw", "TFT_Item_BrambleVest"],
+          "alternatives": ["TFT_Item_AnimaVisage", "TFT_Item_SunfireCape", "TFT_Item_GargoyleStoneplate"]
+        }
+      ]
+    }
+  ],
+  "itemDictionary": {
+    "TFT_Item_InfinityEdge": { "name": "Infinity Edge", "type": "AD / Crit" },
+    "TFT_Item_GuinsoosRageblade": { "name": "Guinsoo's Rageblade", "type": "Attack Speed" },
+    "TFT_Item_LastWhisper": { "name": "Last Whisper", "type": "Armor Shred" },
+    "TFT_Item_Bloodthirster": { "name": "Bloodthirster", "type": "Omnivamp / Shield" },
+    "TFT_Item_TitansResolve": { "name": "Titan's Resolve", "type": "Hybrid Armor/Damage" },
+    "TFT_Item_SteraksGage": { "name": "Sterak's Gage", "type": "Bruiser Survival" },
+    "TFT_Item_BlueBuff": { "name": "Blue Buff", "type": "Mana Generation" },
+    "TFT_Item_JeweledGauntlet": { "name": "Jeweled Gauntlet", "type": "AP Crit" },
+    "TFT_Item_RabadonsDeathcap": { "name": "Rabadon's Deathcap", "type": "Raw AP" },
+    "TFT_Item_SpearOfShojin": { "name": "Spear of Shojin", "type": "Mana Generation" },
+    "TFT_Item_Morellonomicon": { "name": "Morellonomicon", "type": "Anti-Heal / Burn" },
+    "TFT_Item_SunfireCape": { "name": "Sunfire Cape", "type": "Tank Anti-Heal" },
+    "TFT_Item_WarmogsArmor": { "name": "Warmog's Armor", "type": "Raw Health" },
+    "TFT_Item_DragonsClaw": { "name": "Dragon's Claw", "type": "Magic Resist" },
+    "TFT_Item_BrambleVest": { "name": "Bramble Vest", "type": "Armor / Anti-Crit" },
+    "TFT_Item_GargoyleStoneplate": { "name": "Gargoyle Stoneplate", "type": "Resistances" },
+    "TFT_Item_Redemption": { "name": "Redemption", "type": "AoE Healing" },
+    "TFT_Item_StatikkShiv": { "name": "Statikk Shiv", "type": "MR Shred" }
+  },
+  "championDictionary": {
+    "TFT13_Jinx": { "name": "Jinx", "cost": 4, "traits": ["TFT13_Rebel", "TFT13_Enforcer"] },
+    "TFT13_Vi": { "name": "Vi", "cost": 4, "traits": ["TFT13_Rebel", "TFT13_PitFighter"] },
+    "TFT13_Jayce": { "name": "Jayce", "cost": 5, "traits": ["TFT13_Academy", "TFT13_Sentinel"] },
+    "TFT13_Ekko": { "name": "Ekko", "cost": 4, "traits": ["TFT13_Rebel", "TFT13_Artificer"] },
+    "TFT13_Irelia": { "name": "Irelia", "cost": 2, "traits": ["TFT13_Rebel", "TFT13_Sentinel"] },
+    "TFT13_Sett": { "name": "Sett", "cost": 3, "traits": ["TFT13_PitFighter", "TFT13_Bruiser"] },
+    "TFT13_Heimerdinger": { "name": "Heimerdinger", "cost": 4, "traits": ["TFT13_Academy", "TFT13_Artificer"] },
+    "TFT13_Blitzcrank": { "name": "Blitzcrank", "cost": 3, "traits": ["TFT13_Sentinel", "TFT13_Artificer"] },
+    "TFT13_Silco": { "name": "Silco", "cost": 4, "traits": ["TFT13_ChemBaron", "TFT13_Dominator"] },
+    "TFT13_DrMundo": { "name": "Dr. Mundo", "cost": 4, "traits": ["TFT13_ChemBaron", "TFT13_Bruiser"] },
+    "TFT13_Renata": { "name": "Renata Glasc", "cost": 2, "traits": ["TFT13_ChemBaron", "TFT13_Dominator"] }
+  }
+}

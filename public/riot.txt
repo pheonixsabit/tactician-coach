@@ -1,0 +1,4 @@
+# Riot Games Developer Portal Domain Verification
+# Place this file at the root of your verified domain (e.g. https://yourdomain.com/riot.txt)
+# Replace the placeholder below with the exact verification token generated in your Riot Developer Dashboard:
+c81729b4-tactician-coach-riot-verification-token
